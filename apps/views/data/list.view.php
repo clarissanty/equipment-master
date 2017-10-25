@@ -30,8 +30,13 @@
                     <div class="input-field inline">
                         <input id="search" type="text" name="search" class="validate">
                         <label for="search">Cari Data</label>
+
                     </div>
                     <button name="btn_search" type="submit" class="btn btn-floating purple accent-3 waves-light waves-effect tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cari"><i class="mdi mdi-account-search"></i> </button>
+                </div>
+                <div>
+                    <br></br>
+                    <a href="<?php $baseUrl;?>index.php?page=home&action=excel" class="btn btn-primary ">Export to excel</a>         
                 </div>
             </div>
 
@@ -105,6 +110,7 @@
                                 <td>
                                   <a href="<?php $baseUrl;?>index.php?page=home&action=edit&id_data=<?php echo $data->id_data;?>" class="btn btn-floating amber darken-3 waves-effect waves-light tippy" title="Ubah"><i class="mdi mdi-pen"></i> </a>
                                   <a href="<?php $baseUrl;?>index.php?page=home&action=delete&id_data=<?php echo $data->id_data;?>" class="btn btn-floating btn-delete-hapus red darken-3 waves-effect waves-light tippy" title="Hapus"><i class="mdi mdi-delete-empty"></i> </a>
+                                  
                                 </td>
                             </tr>
                             <?php
@@ -148,6 +154,7 @@
     </div>
   </div>
 </div>
+
 
 <script type="text/javascript">
     tippy('.tippy', {

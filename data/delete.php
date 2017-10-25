@@ -12,10 +12,10 @@ if (!isset($_SESSION['username'])) {
 	
 	try{
 		$id_data = $_GET['id_data'];
-		if ($data->delete($id_data)){
+		if ($invent->delete($id_data)){
 
 		}
-		$data->redirect($baseUrl . 'index.php?page=home&action=list');
+        $invent->redirect($baseUrl . 'index.php?page=home&action=list');
 
 	} catch (Exception $e){
 		echo $e->getMessage();

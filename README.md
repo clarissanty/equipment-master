@@ -17,3 +17,12 @@ define('DB_DATABASE', 'db_equipment');
 ```
 
 Export Database ```db_equipment``` on folder apps/config/
+
+if you want to create login page, remember! field on table tbl_admin is :
+
+```
+username : admin
+password : admin
+```
+
+i create encrypt for password using md5

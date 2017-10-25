@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 	$connect->redirect($baseUrl . 'index.php?page=auth&action=login');
 	exit();
 }
-	// include_once 'apps/model/class.data.php';
+	// include_once 'apps/model/class.inventory.php';
 
 	// $data 	= new Data(); 
 
@@ -34,11 +34,11 @@ if (!isset($_SESSION['username'])) {
 		}
 		else {
 			try {
-				if ($data->input($no_register, $waktu_pengadaan, $penempatan_alat, $keterangan, $created_at, $updated_at)) {
+				if ($invent->input($no_register, $waktu_pengadaan, $penempatan_alat, $keterangan, $created_at, $updated_at)) {
 					
 				}
-				
-				$data->redirect($baseUrl . 'index.php?page=home&action=list');
+
+                $invent->redirect($baseUrl . 'index.php?page=home&action=list');
 											
 				
 			} catch (Exception $e) {

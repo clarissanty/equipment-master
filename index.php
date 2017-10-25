@@ -9,10 +9,10 @@ if (!session_id())
 
 require 'apps/config/app.php';
 require_once 'apps/model/class.connection.php';
-require_once 'apps/model/class.data.php';
+require_once 'apps/model/class.inventory.php';
 
-$connect        = new Connection();
-$data           = new Data();
+$connect          = new Connection();
+$invent           = new Inventory();
 
 //here our routes
 $page   = (!empty($_GET['page'])) ? $_GET['page'] : null;
@@ -46,6 +46,9 @@ switch ($page) {
     }
     elseif ($action == 'delete') {
       require 'data/delete.php';
+    }
+    elseif ($action == 'excel'){
+      require 'excel.php';
     }
     else {
       require 'error/404.php';
